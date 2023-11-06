@@ -1,0 +1,118 @@
+@use "common" as *;
+.footer {
+	overflow: hidden;
+	padding: 110px 0px;
+	background: var(--color-blue) url(../images/footer-background.png) no-repeat
+		bottom / contain;
+	@include mq(sp) {
+		padding: 16vw 0px;
+
+		background: var(--color-blue) url(../images/footer-background-sp.png)
+			no-repeat bottom / contain;
+	}
+	&__container {
+		// width: min(54.09%, 779px);
+		// width: min(54.09%, 801px);
+		width: min(82.319%, 811px);
+		// width: min(56.319%, 811px);
+		margin-inline: auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include mq(sp) {
+			flex-direction: column-reverse;
+			width: max(80.26666%, 301px);
+		}
+		&-left {
+			// width: 57.637%;
+			width: 55.637%;
+			@include mq(sp) {
+				width: 100%;
+				text-align: center;
+			}
+			img {
+				aspect-ratio: 200/43;
+				max-width: 200px;
+				height: auto;
+				margin-bottom: 20px;
+				@include mq(sp) {
+					max-width: 49.067vw;
+					margin-bottom: 5.333vw;
+				}
+			}
+		}
+		&-right {
+			// width: 35.3%;
+			width: 38.3%;
+			text-align: right;
+			@include mq(sp) {
+				width: 100%;
+				text-align: center;
+			}
+			div:first-child {
+				color: var(--color-white);
+				font-family: $font-Noto;
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 160%; /* 38.4px */
+				margin-bottom: 20px;
+				@include mq(sp) {
+					font-size: 4.267vw;
+					margin-bottom: 2.667vw;
+				}
+			}
+			div:nth-child(2) {
+				color: var(--color-white);
+				font-family: $font-Noto;
+				// font-size: 24px;
+				font-style: normal;
+				line-height: 160%; /* 38.4px */
+				white-space: nowrap;
+				font-weight: 400;
+				margin-bottom: 10px;
+				font-size: clamp(1rem, 0.4286rem + 1.1905vw, 1.5rem);
+				@include mq(sp) {
+					// font-size: 4.267vw; /* 25.6px */
+					margin-bottom: 8vw;
+				}
+				span {
+					// font-size: 40px;
+					font-weight: 700;
+					font-size: clamp(1.5rem, 0.357rem + 2.38vw, 2.5rem);
+					@include mq(sp) {
+						// font-size: 6.4vw;
+					}
+				}
+			}
+		}
+	}
+	&-address {
+		color: var(--color-white);
+		font-family: $font-Noto;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 160%; /* 28.8px */
+		margin-bottom: 10px;
+		@include mq(sp) {
+			font-size: 3.2vw;
+			margin-bottom: 4vw;
+		}
+	}
+	&-policy {
+		a {
+			color: var(--color-white);
+			font-family: $font-Noto;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 160%; /* 28.8px */
+			text-decoration-line: underline;
+			display: block;
+			@include mq(sp) {
+				font-size: 3.2vw;
+			}
+		}
+	}
+}
